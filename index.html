@@ -66,7 +66,7 @@ img{display:block;max-width:100%}
   background:rgba(59,18,89,.97);backdrop-filter:saturate(160%) blur(8px);color:#fff;
 }
 .topbar .inner{display:flex;align-items:center;gap:11px;padding:9px var(--gut)}
-.tb-mark{width:32px;height:32px;flex:0 0 auto}
+.tb-mark{width:34px;height:34px;flex:0 0 auto;object-fit:contain}
 .tb-txt{min-width:0;line-height:1.15;flex:1}
 .tb-txt b{display:block;font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.01em}
 .tb-txt span{display:block;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
@@ -83,10 +83,11 @@ img{display:block;max-width:100%}
     linear-gradient(168deg,#3B1259 0%,#2A0C42 100%);
   color:#fff;
 }
-.hero .inner{padding:26px var(--gut) 30px}
-.logocard{background:#fff;border-radius:16px;padding:16px 18px;margin:0 0 22px;
-  box-shadow:0 6px 22px rgba(0,0,0,.22)}
-.logocard img{width:100%;max-width:300px;margin:0 auto}
+.hero .inner{padding:22px var(--gut) 30px;display:flex;flex-direction:column}
+.hero-copy{order:2}
+.logocard{order:1;background:#fff;border-radius:16px;padding:13px 16px;margin:0 0 22px;
+  align-self:flex-start;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.logocard img{width:100%;max-width:230px;margin:0 auto}
 .who{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft);
   margin:0 0 10px;font-weight:600}
 .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,8.4vw,40px);
@@ -225,7 +226,8 @@ tbody tr:last-child td{border-bottom:0}
 .close p{color:#C9B8E0;font-size:14.5px;margin:0 auto 22px;max-width:34ch}
 .stack{display:grid;gap:10px;max-width:420px;margin:0 auto}
 .sig{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
-.sig .logocard{max-width:300px;margin:0 auto 14px;padding:14px 16px}
+.sig .logocard{max-width:320px;margin:0 auto 14px;padding:16px 18px;align-self:center}
+.sig .logocard img{max-width:100%}
 .sig .st{font-size:12.5px;color:#B9A6D4;line-height:1.6}
 .foot{padding:20px var(--gut) 24px;font-size:11.5px;color:var(--muted);line-height:1.6;text-align:center}
 
@@ -234,7 +236,7 @@ tbody tr:last-child td{border-bottom:0}
   backdrop-filter:blur(10px);border-top:1px solid var(--line);
   padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));
   display:flex;align-items:center;gap:12px;max-width:var(--maxw);margin:0 auto}
-.botbar .bmark{width:30px;height:30px;flex:0 0 auto}
+.botbar .bmark{width:32px;height:32px;flex:0 0 auto;object-fit:contain}
 .botbar .info{min-width:0;flex:1}
 .botbar .info b{display:block;font-size:13px;line-height:1.25}
 .botbar .info span{display:block;font-size:11.5px;color:var(--muted)}
@@ -266,8 +268,8 @@ tbody tr:last-child td{border-bottom:0}
   /* hero: copy left, logo right */
   .hero .inner{padding:52px var(--gut) 56px;display:grid;
     grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-  .hero-copy{min-width:0}
-  .logocard{margin:0;padding:26px 28px}
+  .hero-copy{min-width:0;order:0}
+  .logocard{order:0;margin:0;padding:26px 28px;align-self:center}
   .logocard img{max-width:100%}
   .hero h1{font-size:44px;max-width:14ch}
   .lede{font-size:16.5px}
@@ -313,7 +315,7 @@ tbody tr:last-child td{border-bottom:0}
 
   <header class="topbar">
     <div class="inner">
-      <img class="tb-mark" src="assets/sigmaeta-logo.png" alt="">
+      <img class="tb-mark" src="assets/sigmaeta-flame.png" alt="">
       <div class="tb-txt">
         <b>SigmaEta</b>
         <span>The Operations Club of IIM Trichy</span>
@@ -677,7 +679,7 @@ tbody tr:last-child td{border-bottom:0}
 </div>
 
 <div class="botbar">
-  <img class="bmark" src="assets/sigmaeta-mark.png" alt="">
+  <img class="bmark" src="assets/sigmaeta-flame.png" alt="">
   <div class="info">
     <b>SigmaEta × Grant Thornton</b>
     <span>5 certification programmes</span>
